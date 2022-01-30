@@ -40,6 +40,15 @@ solana airdrop 1
 
 ### Creating SPL NFTs
 
+```sh
+spl-token create-token --decimals 0
+```
+
 ### Further Resources
+- [Solana Docs](https://docs.solana.com/introduction)
+- [SPL Token Program](https://spl.solana.com/token)
+- [Metaplex Docs](https://docs.metaplex.com/candy-machine-v1/introduction)
 
 ### License
+
+[MIT License](https://github.com/YosephKS/solana-spl-tutorial/blob/main/LICENSE)
