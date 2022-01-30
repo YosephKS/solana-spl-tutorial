@@ -1,4 +1,4 @@
-# Solana SPL Tutorial
+# 🚀 Solana SPL Tutorial
 This repository contains full tutorial on Solana SPL token
 
 ## Table of Contents
@@ -25,12 +25,30 @@ sh -c "$(curl -sSfL https://release.solana.com/v1.9.5/install)"
 curl https://release.solana.com/v1.9.5/solana-install-init-x86_64-pc-windows-msvc.exe --output C:\solana-install-tmp\solana-install-init.exe --create-dirs
 ```
 
-#### 2. Solana Wallet
+#### 2. SPL CLI
+
+```sh
+cargo install spl-token-cli
+```
+
+#### 3. Solana Wallet
 
 
-#### 3. Configure Solana Cluster
+#### 4. Configure Solana Cluster
 
-#### 4. SOL Balance
+Check your Solana Cluster configuration
+
+```sh
+solana config get
+```
+
+Set the Solana Cluster to Testnet
+
+```sh
+solana config set --url https://api.devnet.solana.com
+```
+
+#### 5. SOL Balance
 
 ```
 solana airdrop 1
