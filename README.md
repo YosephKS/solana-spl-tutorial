@@ -33,6 +33,11 @@ cargo install spl-token-cli
 
 #### 3. Solana Wallet
 
+For this tutorial, we're going to use a Filesystem wallet. This is sufficient for testing, but not recommended for production purpose.
+
+```sh
+solana-keygen new --no-outfile
+```
 
 #### 4. Configure Solana Cluster
 
@@ -50,11 +55,50 @@ solana config set --url https://api.devnet.solana.com
 
 #### 5. SOL Balance
 
+To check you SOL balance
+
+```sh
+solana balance
+```
+
+To get some testnet SOL
+
 ```
 solana airdrop 1
 ```
 
 ### Creating SPL Tokens
+
+First, create the token
+
+```sh
+spl-token create-token
+```
+
+Using the unique token identifier, we can create an account to store our balance data
+
+```sh
+spl-token create-account <token-identifier>
+```
+
+Once the account is created, we can mint some SPL tokens.
+
+```sh
+ spl-token mint <token-identifier> <token-amount>
+```
+
+To check the total supply of the token, use the following command
+
+```sh
+spl-token supply <token-identifier>
+```
+
+To check the balance of the token, use the following command
+
+```sh
+spl-token balance <token-identifier>
+```
+
 
 ### Creating SPL NFTs
 
