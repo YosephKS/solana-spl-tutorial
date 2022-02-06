@@ -99,11 +99,30 @@ To check the balance of the token, use the following command
 spl-token balance <token-identifier>
 ```
 
-
 ### Creating SPL NFTs
+
+First, create the token
 
 ```sh
 spl-token create-token --decimals 0
+```
+
+Using the unique token identifier, we can create an account to store our balance data
+
+```sh
+spl-token create-account <token-identifier>
+```
+
+Mint only one token into the account
+
+```sh
+spl-token mint <token-identifier> 1 <token-account>
+```
+
+Disable future minting
+
+```sh
+spl-token authorize <token-identifier> mint --disable
 ```
 
 ### Further Resources
